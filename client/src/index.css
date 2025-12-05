@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* Reset UA dialog defaults so custom layout works */
+dialog {
+margin: 0;
+padding: 0;
+}
+
+/* Panel: no transform, width constrained */
+.modal-panel {
+min-width: 20rem;
+width: min(90vw, 28rem);
+border-radius: 1rem;
+border: 1px solid rgb(226 232 240);
+background: #ffffff;
+box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+padding: 0;
+}
+
+/* Optional native backdrop if using <dialog>, not required here */
+.modal-panel::backdrop {
+background: rgba(0,0,0,0.4);
+backdrop-filter: blur(1px);
+}
